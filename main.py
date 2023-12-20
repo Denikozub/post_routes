@@ -21,7 +21,7 @@ def bins(x):
 
 if __name__ == "__main__":
     st.title('Дэшборд "Маршруты почты"')
-    try: df = load_data(Fernet(st.text_input('Введите пароль:').encode()).decrypt(DATAFILE).decode())
+    try: df = load_data(Fernet(st.text_input('Введите пароль:', default='').encode()).decrypt(DATAFILE).decode())
     except ValueError: pass
 
     if st.checkbox('Показать статистику по РПО и маршрутам'):
