@@ -2,3 +2,6 @@ streamlit==1.20.0
 geopandas==0.12.2
 streamlit_folium==0.17.4
 cryptography==3.4.8
+folium==0.14.0
+matplotlib==3.5.1
+mapclassify==2.4.3
