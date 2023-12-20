@@ -22,7 +22,7 @@ def bins(x):
 if __name__ == "__main__":
     st.title('Дэшборд "Маршруты почты"')
     try: df = load_data(Fernet(st.text_input('Введите пароль:', value='').encode()).decrypt(DATAFILE).decode())
-    except ValueError: pass
+    except ValueError: st.text("Неверный пароль"); st.stop()
 
     if st.checkbox('Показать статистику по РПО и маршрутам'):
         month_no = st.multiselect('Месяц аггрегации данных', df.month_no.unique(), default='2023-10')
