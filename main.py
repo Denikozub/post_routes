@@ -61,5 +61,5 @@ if __name__ == "__main__":
             st_folium(df.iloc[[route_no-1]].explore(column='кол-во РПО', cmap='autumn', legend=True), height=500, use_container_width=True)
         except Exception: st.title('Нет данных, измените фильтры')
     else:
-        st_folium(df.explore(column='кол-во РПО', cmap='cool', legend=True), height=500, use_container_width=True)
-        # except Exception: st.title('Нет данных, измените фильтры')
+        try: st_folium(df.explore(column='кол-во РПО', cmap='cool', legend=True), height=500, use_container_width=True)
+        except Exception: st.title('Нет данных, измените фильтры')
